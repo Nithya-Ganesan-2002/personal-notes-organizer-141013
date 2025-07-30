@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
+  --color-primary: #1976d2;
+  --color-accent: #ffb300;
+  --color-secondary: #424242;
   --background: #ffffff;
   --foreground: #171717;
+  --sidebar-width: 260px;
 }
 
 @theme inline {
@@ -23,4 +27,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility for sidebar shrink on mobile */
+@media (max-width: 639px) {
+  .sidebar {
+    width: 0 !important;
+    min-width: 0 !important;
+  }
 }
